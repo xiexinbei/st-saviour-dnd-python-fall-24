@@ -23,7 +23,7 @@ class Player:
         
 
     def assign_stats(self):
-        stats = [10, 15, 20, 30]
+        stats = [10, 15, 20]
         random.shuffle(stats)
         self.strength = stats[0]
 
