@@ -43,19 +43,29 @@ if __name__ == '__main__':
     print('100: principal\'s office')
     print_dramatic_text('Which room do you want to enter?')
     room = input('Room number: ')
+    if (room == '201'):
+           print_dramatic_text('You are in Art room!')
+           roll = random.randint(1,20)
+           draw_d20(roll)
+           if roll == 6:
+              print_dramatic_text('win!')
+           else:
+              print_dramatic_text('Retry the gaaame!')
+    if (room == '100'):
+             print_dramatic_text('A ghost came to kiss you and have a crush on you! Leave the school with it!')
     if(room == '302'):
         print_dramatic_text('You enter the music room ...')
         roll = random.randint(1,20)
         draw_d20(roll)
         if roll == 1:
          room = input('Room number: ')
-         if room == 201:
+         if (room == '201'):
            print_dramatic_text('You are in Art room!')
            roll = random.randint(1,20)
            draw_d20(roll)
         if roll == 6:
               room = input('Room number')
-              if room == 100:
+              if (room == '100'):
                print_dramatic_text('A ghost came to kiss you and have a crush on you! Leave the school with it!')
         else:
          if roll >= 2:
@@ -63,7 +73,7 @@ if __name__ == '__main__':
           print_dramatic_text('1 在音乐里面是什么意思')
           if player.role == 'musician':
            print_dramatic_text('Translation: what is 1 mean music?')
-         else:
+          else:
            print_dramatic_text('Do you want to get buffs?')
            print_dramatic_text('Yes or no?')
            choice = input('Choice: ')
@@ -76,13 +86,13 @@ if __name__ == '__main__':
          answer = input ('Answer: ')
          if answer == 'do':
           room = input('Room number: ')
-         if room == 201:
+         if (room == '201'):
            print_dramatic_text('You are in Art room!')
            roll = random.randint(1,20)
            draw_d20(roll)
            if roll == 6:
               print_dramatic_text('win!')
-         if room == 100:
+         if (room == '100'):
              print_dramatic_text('A ghost came to kiss you and have a crush on you! Leave the school with it!')
          else:
             skull = '\U0001F480'
@@ -98,7 +108,16 @@ if __name__ == '__main__':
      draw_d6(roll)
      if roll <= 2:
       room = input('Room number: ')
-     if roll > 2:
+      if (room == '302'):
+               print_dramatic_text('You are in Art room!')
+               roll = random.randint(1,4)
+               draw_d4(roll)
+               if roll == 4:
+                 print_dramatic_text('WIN!!')
+      if (room == '100'):
+             print_dramatic_text('A ghost came to kiss you and you win!')
+        
+      if roll > 2:
          print_dramatic_text('You go to the dungeon! Answer this easy question to go back!')
          print_dramatic_text('What are the three basic clors in art? Red, blue and?')
          if player.role == 'artist':
@@ -116,13 +135,13 @@ if __name__ == '__main__':
          answer =input ('Answer: ')
          if answer == 'yellow' or 'Yellow':
             room = input('Room number: ')
-            if room == 302:
+            if (room == '302'):
                print_dramatic_text('You are in Art room!')
                roll = random.randint(1,4)
                draw_d4(roll)
                if roll == 4:
                  print_dramatic_text('WIN!!')
-            if room == 100:
+            if (room == '100'):
              print_dramatic_text('A ghost came to kiss you and have a crush on you! Leave the school with it!')
          else:
             skull = '\U0001F480'
